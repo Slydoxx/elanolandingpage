@@ -31,7 +31,11 @@ const FAQ = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-white">Vous avez des questions?</h2>
-            <p className="text-2xl font-bold text-white">Nous avons <span className="bg-mint px-3 py-1 rounded-lg text-forest">les réponses!</span></p>
+            <p className="text-2xl font-bold text-white">
+              Nous avons 
+              <br className="block sm:hidden" />
+              <span className="bg-mint px-3 py-1 rounded-lg text-forest ml-1">les réponses!</span>
+            </p>
           </div>
 
           <Accordion type="single" collapsible className="space-y-4">
