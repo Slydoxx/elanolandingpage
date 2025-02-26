@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -15,7 +15,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white">
             Un prototype
             <br />
-            en 1 semaine
+            <span className="bg-[#D3E4FD]/10 px-2 rounded-lg">en 1 semaine</span>
             <br />
             sur mesure
           </h1>
@@ -27,7 +27,7 @@ const Hero = () => {
               className="bg-mint hover:bg-mint/90 text-forest font-medium px-8 py-6 text-lg"
               onClick={() => window.open('https://calendly.com/thom-cademi/30min', '_blank')}
             >
-              Planifier un appel <ArrowRight className="ml-2 h-5 w-5" />
+              Planifier un appel
             </Button>
             <Button variant="outline" className="border-mint/20 text-mint hover:bg-mint/10">
               <Link to="/marketplace" className="flex items-center">

@@ -24,10 +24,10 @@ const Navbar = () => {
                   Nos services
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-4 w-[400px]">
+                  <div className="grid gap-3 p-4 w-[400px] bg-transparent border-0">
                     <Link
                       to="/prototype-sur-mesure"
-                      className="block p-3 space-y-1 bg-forest-light hover:bg-mint/10 rounded-md"
+                      className="block p-3 space-y-1 hover:bg-mint/5 rounded-md transition-colors"
                     >
                       <div className="font-medium text-white">Prototype sur mesure</div>
                       <p className="text-sm text-white/70">
@@ -36,7 +36,7 @@ const Navbar = () => {
                     </Link>
                     <Link
                       to="/ia-automatisation"
-                      className="block p-3 space-y-1 bg-forest-light hover:bg-mint/10 rounded-md"
+                      className="block p-3 space-y-1 hover:bg-mint/5 rounded-md transition-colors"
                     >
                       <div className="font-medium text-white">Parlons IA & automatisation</div>
                       <p className="text-sm text-white/70">
