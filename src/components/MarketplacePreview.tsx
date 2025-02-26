@@ -1,3 +1,4 @@
+
 import React from "react";
 import {
   Carousel,
@@ -6,8 +7,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const MarketplacePreview = () => {
   const recentItems = [
@@ -34,17 +33,9 @@ const MarketplacePreview = () => {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto">
-        <div className="flex justify-between items-center mb-12">
-          <div>
-            <h2 className="text-4xl font-bold text-white mb-4">Marketplace</h2>
-            <p className="text-white/80">Découvrez nos dernières réalisations et automatisations</p>
-          </div>
-          <Link 
-            to="/marketplace"
-            className="inline-flex items-center gap-2 text-mint hover:text-mint/80 transition-colors"
-          >
-            Voir tout <ArrowRight className="w-4 h-4" />
-          </Link>
+        <div className="mb-12">
+          <h2 className="text-4xl font-bold text-white mb-4">Marketplace</h2>
+          <p className="text-white/80">Découvrez nos dernières réalisations et automatisations</p>
         </div>
 
         <Carousel

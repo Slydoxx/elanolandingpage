@@ -50,12 +50,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom section */}
-        <div className="border-t border-mint/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-white/60">
+        <div className="border-t border-mint/10 mt-16 pt-8 flex justify-center text-white/60">
           <p>&copy; {new Date().getFullYear()} CADEMI. Tous droits réservés.</p>
-          <div className="flex gap-8 mt-4 md:mt-0">
-            <Link to="/privacy" className="hover:text-mint transition-colors">Privacy</Link>
-            <Link to="/terms" className="hover:text-mint transition-colors">Terms</Link>
-          </div>
         </div>
       </div>
     </footer>
