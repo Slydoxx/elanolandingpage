@@ -53,18 +53,18 @@ const Stats = () => {
 
           {/* Reserved slot */}
           <div
-            className="absolute w-full max-w-[260px] rounded-xl overflow-hidden transform bg-forest-light border border-divine/20"
+            className="absolute w-full max-w-[260px] rounded-xl overflow-hidden transform bg-forest-light border border-[#11B57F]/20"
             style={{
               right: '0',
               zIndex: 0,
             }}
           >
             <div className="relative p-6">
-              <div className="w-12 h-12 rounded-full bg-divine/10 mb-4 flex items-center justify-center">
-                <span className="text-divine font-bold">4</span>
+              <div className="w-12 h-12 rounded-full bg-[#11B57F]/10 mb-4 flex items-center justify-center">
+                <span className="text-[#11B57F] font-bold">4</span>
               </div>
-              <p className="text-divine font-medium text-lg">Mars - Réservé</p>
-              <span className="text-white/60 text-sm">Sprint confirmé</span>
+              <p className="text-[#11B57F] font-medium text-lg">Mars - Réservé</p>
+              <span className="text-white/60 text-sm">Une entreprise a réservé son sprint</span>
             </div>
           </div>
         </div>
