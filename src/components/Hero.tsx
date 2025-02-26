@@ -31,7 +31,7 @@ const Hero = () => {
             </Button>
             <Button variant="outline" className="border-mint/20 text-mint hover:bg-mint/10">
               <Link to="/marketplace" className="flex items-center">
-                -> Marketplace
+                {'->'} Marketplace
               </Link>
             </Button>
           </div>
