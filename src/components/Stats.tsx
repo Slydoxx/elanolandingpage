@@ -19,18 +19,19 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-12">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 max-w-2xl mx-auto">
+        <div className="text-center mb-8 max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             <span className="text-mint">3 places</span> disponibles en Mars
           </h2>
           <p className="text-white/80 text-lg">
-            Pour garantir un accompagnement d'excellence, nous limitons volontairement notre capacité à 3 entreprises par mois
+            Pour garantir un accompagnement d'excellence, nous limitons volontairement notre capacité à 4 entreprises par mois
           </p>
         </div>
         
-        <div className="relative h-[250px] max-w-3xl mx-auto">
+        <div className="relative h-[200px] max-w-4xl mx-auto">
+          {/* Available slots */}
           {cards.map((card, index) => (
             <div
               key={card.title}
@@ -49,6 +50,23 @@ const Stats = () => {
               </div>
             </div>
           ))}
+
+          {/* Reserved slot */}
+          <div
+            className="absolute w-full max-w-[260px] rounded-xl overflow-hidden transform bg-forest-light border border-divine/20"
+            style={{
+              right: '0',
+              zIndex: 0,
+            }}
+          >
+            <div className="relative p-6">
+              <div className="w-12 h-12 rounded-full bg-divine/10 mb-4 flex items-center justify-center">
+                <span className="text-divine font-bold">4</span>
+              </div>
+              <p className="text-divine font-medium text-lg">Mars - Réservé</p>
+              <span className="text-white/60 text-sm">Sprint confirmé</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
