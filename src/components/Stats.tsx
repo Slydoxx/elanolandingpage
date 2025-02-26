@@ -35,7 +35,7 @@ const Stats = () => {
           {cards.map((card, index) => (
             <div
               key={card.title}
-              className="absolute w-full max-w-[260px] rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:z-10 bg-forest-light border border-mint/20"
+              className="absolute w-[300px] h-[160px] rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:z-10 bg-forest-light border border-mint/20"
               style={{
                 left: `${index * 10}%`,
                 zIndex: index,
@@ -53,7 +53,7 @@ const Stats = () => {
 
           {/* Reserved slot */}
           <div
-            className="absolute w-full max-w-[260px] rounded-xl overflow-hidden transform bg-forest-light border border-[#11B57F]/20"
+            className="absolute w-[300px] h-[160px] rounded-xl overflow-hidden transform bg-forest-light border border-[#11B57F]/20"
             style={{
               right: '0',
               zIndex: 0,
