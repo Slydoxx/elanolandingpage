@@ -1,7 +1,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Star, Volume2, VolumeX } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useState, useRef } from "react";
 
 const Hero = () => {
@@ -10,7 +9,6 @@ const Hero = () => {
 
   const toggleSound = () => {
     if (playerRef.current) {
-      // Post message to iframe to mute/unmute
       playerRef.current.contentWindow?.postMessage(
         JSON.stringify({
           event: 'command',
@@ -19,6 +17,13 @@ const Hero = () => {
         '*'
       );
       setIsMuted(!isMuted);
+    }
+  };
+
+  const scrollToMarketplace = () => {
+    const element = document.getElementById("marketplace");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -45,12 +50,14 @@ const Hero = () => {
               className="w-full sm:w-auto bg-mint hover:bg-mint/90 text-forest font-medium px-8 py-6 text-lg"
               onClick={() => window.open('https://calendly.com/thom-cademi/30min', '_blank')}
             >
-              Planifier un appel
+              Réserver mon sprint
             </Button>
-            <Button variant="outline" className="w-full sm:w-auto border-mint/20 text-mint hover:bg-mint/10">
-              <Link to="/marketplace" className="flex items-center">
-                {'->'} Marketplace
-              </Link>
+            <Button 
+              variant="outline" 
+              className="w-full sm:w-auto border-mint/20 text-mint hover:bg-mint/10"
+              onClick={scrollToMarketplace}
+            >
+              {'->'} Marketplace
             </Button>
           </div>
         </div>

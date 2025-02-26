@@ -49,7 +49,7 @@ const Navbar = () => {
           className="bg-mint hover:bg-mint-light text-forest font-medium"
           onClick={() => window.open('https://calendly.com/thom-cademi/30min', '_blank')}
         >
-          <span className="hidden md:inline">Planifier un appel</span>
+          <span className="hidden md:inline">Lancer mon prototype</span>
           <span className="md:hidden">Contact</span>
         </Button>
       </div>
