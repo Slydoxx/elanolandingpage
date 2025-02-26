@@ -32,39 +32,41 @@ const Stats = () => {
         
         <div className="relative h-[200px] max-w-4xl mx-auto">
           {/* Available slots */}
-          {cards.map((card, index) => (
-            <div
-              key={card.title}
-              className="absolute w-full max-w-[260px] rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:z-10 bg-forest-light border border-mint/20"
-              style={{
-                left: `${index * 10}%`,
-                zIndex: index,
-              }}
-            >
-              <div className="relative p-6">
-                <div className="w-12 h-12 rounded-full bg-mint/10 mb-4 flex items-center justify-center">
-                  <span className="text-mint font-bold">{index + 1}</span>
+          <div className="flex justify-center gap-2 md:gap-4">
+            {cards.map((card, index) => (
+              <div
+                key={card.title}
+                className="w-full max-w-[260px] rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:z-10 bg-forest-light border border-mint/20 relative md:translate-x-0"
+                style={{
+                  transform: `translateX(${index * -20}px)`,
+                  zIndex: index,
+                }}
+              >
+                <div className="relative p-6">
+                  <div className="w-12 h-12 rounded-full bg-mint/10 mb-4 flex items-center justify-center">
+                    <span className="text-mint font-bold">{index + 1}</span>
+                  </div>
+                  <p className="text-mint font-medium text-lg">{card.title}</p>
+                  <span className="text-white/60 text-sm">Réservez maintenant</span>
                 </div>
-                <p className="text-mint font-medium text-lg">{card.title}</p>
-                <span className="text-white/60 text-sm">Réservez maintenant</span>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
 
           {/* Reserved slot */}
           <div
-            className="absolute w-full max-w-[260px] rounded-xl overflow-hidden transform bg-forest-light border border-divine/20"
+            className="absolute w-full max-w-[260px] rounded-xl overflow-hidden transform bg-forest-light border border-mint/20 md:right-0 right-4"
             style={{
-              right: '0',
+              top: 0,
               zIndex: 0,
             }}
           >
             <div className="relative p-6">
-              <div className="w-12 h-12 rounded-full bg-divine/10 mb-4 flex items-center justify-center">
-                <span className="text-divine font-bold">4</span>
+              <div className="w-12 h-12 rounded-full bg-mint/10 mb-4 flex items-center justify-center">
+                <span className="text-mint font-bold">4</span>
               </div>
-              <p className="text-divine font-medium text-lg">Mars - Réservé</p>
-              <span className="text-white/60 text-sm">Sprint confirmé</span>
+              <p className="text-mint font-medium text-lg">Mars - Réservé</p>
+              <span className="text-white/60 text-sm">Une entreprise a réservé son sprint</span>
             </div>
           </div>
         </div>
