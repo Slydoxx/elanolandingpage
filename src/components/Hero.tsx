@@ -39,8 +39,8 @@ const Hero = () => {
         <div className="relative mt-8 lg:mt-0">
           <div className="absolute -inset-0.5 bg-mint/20 rounded-2xl blur opacity-30" />
           <img
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-            alt="Tech professional"
+            src="/lovable-uploads/6e284e72-9a20-4251-9f22-17e93d7d29e1.png"
+            alt="Entraînement entretien téléphonique"
             className="relative rounded-2xl shadow-2xl w-full"
           />
           <div className="absolute -bottom-10 -left-10 bg-forest-light p-6 rounded-xl shadow-xl border border-mint/10">
