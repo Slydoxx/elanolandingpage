@@ -18,6 +18,10 @@ const Stats = () => {
     }
   ];
 
+  const handleCardClick = () => {
+    window.open('https://calendly.com/votre-lien', '_blank');
+  };
+
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
@@ -35,7 +39,8 @@ const Stats = () => {
           {cards.map((card, index) => (
             <div
               key={card.title}
-              className="absolute w-[300px] h-[160px] rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:z-10 bg-forest-light border border-mint/20"
+              onClick={handleCardClick}
+              className="absolute w-[300px] h-[160px] rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:z-10 bg-forest-light border border-mint/20 cursor-pointer"
               style={{
                 left: `${index * 10}%`,
                 zIndex: index,
