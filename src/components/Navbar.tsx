@@ -29,9 +29,12 @@ const Navbar = () => {
           >
             Nos services
           </button>
-          <Link to="/marketplace" className="text-white/90 hover:text-white transition-colors">
+          <button 
+            onClick={() => scrollToSection("marketplace")} 
+            className="text-white/90 hover:text-white transition-colors"
+          >
             Marketplace
-          </Link>
+          </button>
           <button 
             onClick={() => scrollToSection("faq")} 
             className="text-white/90 hover:text-white transition-colors"
