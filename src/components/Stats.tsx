@@ -30,7 +30,7 @@ const Stats = () => {
           </p>
         </div>
         
-        <div className="relative h-[200px] max-w-4xl mx-auto md:mt-0 mt-20">
+        <div className="relative h-[200px] max-w-4xl mx-auto">
           {/* Available slots */}
           {cards.map((card, index) => (
             <div
@@ -53,18 +53,18 @@ const Stats = () => {
 
           {/* Reserved slot */}
           <div
-            className="absolute w-full max-w-[260px] rounded-xl overflow-hidden transform bg-forest-light border border-mint/20 md:top-0 top-[200px]"
+            className="absolute w-full max-w-[260px] rounded-xl overflow-hidden transform bg-forest-light border border-divine/20"
             style={{
               right: '0',
               zIndex: 0,
             }}
           >
             <div className="relative p-6">
-              <div className="w-12 h-12 rounded-full bg-mint/10 mb-4 flex items-center justify-center">
-                <span className="text-mint font-bold">4</span>
+              <div className="w-12 h-12 rounded-full bg-divine/10 mb-4 flex items-center justify-center">
+                <span className="text-divine font-bold">4</span>
               </div>
-              <p className="text-mint font-medium text-lg">Mars - Réservé</p>
-              <span className="text-white/60 text-sm">Une entreprise a réservé son sprint</span>
+              <p className="text-divine font-medium text-lg">Mars - Réservé</p>
+              <span className="text-white/60 text-sm">Sprint confirmé</span>
             </div>
           </div>
         </div>
