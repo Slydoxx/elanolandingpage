@@ -10,11 +10,11 @@ const Navbar = () => {
           Elano
         </Link>
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/#services" className="text-white/90 hover:text-white transition-colors">
-            Nos services
-          </Link>
           <Link to="/#methodology" className="text-white/90 hover:text-white transition-colors">
             Notre méthodologie
+          </Link>
+          <Link to="/#services" className="text-white/90 hover:text-white transition-colors">
+            Nos services
           </Link>
           <Link to="/#pricing" className="text-white/90 hover:text-white transition-colors">
             Pricing

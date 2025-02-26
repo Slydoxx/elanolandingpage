@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Star, Award, ShieldCheck } from "lucide-react";
 
@@ -7,9 +8,9 @@ const Features = () => {
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-white">
-            How it works?
+            Notre méthodologie
           </h2>
-          <p className="text-white/80">Our AI-powered platform simplifies tech recruitment</p>
+          <p className="text-white/80">Un processus clair, testé et efficace pour rapidement se mettre au service de la transformation de projet en produit digital performant</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {[
