@@ -1,9 +1,27 @@
 
 import { Button } from "@/components/ui/button";
-import { Star } from "lucide-react";
+import { Star, Volume2, VolumeX } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState, useRef } from "react";
 
 const Hero = () => {
+  const [isMuted, setIsMuted] = useState(true);
+  const playerRef = useRef<HTMLIFrameElement>(null);
+
+  const toggleSound = () => {
+    if (playerRef.current) {
+      // Post message to iframe to mute/unmute
+      playerRef.current.contentWindow?.postMessage(
+        JSON.stringify({
+          event: 'command',
+          func: isMuted ? 'unMute' : 'mute'
+        }),
+        '*'
+      );
+      setIsMuted(!isMuted);
+    }
+  };
+
   return (
     <section className="pt-32 pb-20 px-4 overflow-hidden">
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -38,11 +56,27 @@ const Hero = () => {
         </div>
         <div className="relative mt-8 lg:mt-0">
           <div className="absolute -inset-0.5 bg-mint/20 rounded-2xl blur opacity-30" />
-          <img
-            src="/lovable-uploads/6e284e72-9a20-4251-9f22-17e93d7d29e1.png"
-            alt="Entraînement entretien téléphonique"
-            className="relative rounded-2xl shadow-2xl w-full"
-          />
+          <div className="relative rounded-2xl shadow-2xl overflow-hidden">
+            <Button 
+              variant="secondary"
+              size="icon"
+              className="absolute top-4 right-4 z-10 bg-forest/80 hover:bg-forest text-mint"
+              onClick={toggleSound}
+            >
+              {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+            </Button>
+            <iframe
+              ref={playerRef}
+              width="100%"
+              height="400"
+              src="https://www.youtube.com/embed/CoEg1ci3F-s?autoplay=1&mute=1&enablejsapi=1"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full"
+            />
+          </div>
           <div className="absolute -bottom-10 -left-10 bg-forest-light p-6 rounded-xl shadow-xl border border-mint/10">
             <p className="text-mint text-4xl font-bold">124k+</p>
             <p className="text-white/80">Active candidates</p>
