@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Code, Cpu, Database, Layout, MessageSquare, Robot, Sparkles, Wand2 } from "lucide-react";
+import { Code, Cpu, Database, Layout, MessageSquare, Bot, Sparkles, Wand2 } from "lucide-react";
 
 const Services = () => {
   const productServices = [
@@ -23,7 +23,7 @@ const Services = () => {
 
   const aiServices = [
     {
-      icon: Robot,
+      icon: Bot,
       title: "Automatisation IA",
       description: "Optimisation des processus métier grâce à l'intelligence artificielle."
     },
