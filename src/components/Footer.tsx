@@ -1,5 +1,5 @@
 
-import { Mail, Youtube, Linkedin } from "lucide-react";
+import { Mail, Youtube, Linkedin, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -10,13 +10,19 @@ const Footer = () => {
           {/* Left column */}
           <div>
             <h2 className="text-4xl font-bold mb-6">Let's talk</h2>
-            <a 
-              href="mailto:Thom@cademi.fr"
-              className="flex items-center gap-2 text-white/60 hover:text-mint transition-colors mb-4 text-lg group"
-            >
-              <Mail className="w-5 h-5 group-hover:text-mint transition-colors" />
-              Thom@cademi.fr
-            </a>
+            <div className="space-y-4">
+              <a 
+                href="mailto:Thom@cademi.fr"
+                className="flex items-center gap-2 text-white/60 hover:text-mint transition-colors text-lg group"
+              >
+                <Mail className="w-5 h-5 group-hover:text-mint transition-colors" />
+                Thom@cademi.fr
+              </a>
+              <div className="flex items-center gap-2 text-white/60 text-lg">
+                <MapPin className="w-5 h-5 text-white/60" />
+                <span>2 square villaret joyeuse, 75017 Paris</span>
+              </div>
+            </div>
           </div>
 
           {/* Right column */}
