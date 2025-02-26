@@ -27,7 +27,7 @@ const Stats = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            <span className="text-white border-b-2 border-mint">3 places</span> disponibles en Mars
+            <span className="text-white border-b-2 border-[#ea384c]">3 places</span> disponibles en Mars
           </h2>
           <p className="text-white/80 text-lg">
             Pour garantir un accompagnement d'excellence, nous limitons volontairement notre capacité à 4 entreprises par mois
@@ -48,7 +48,7 @@ const Stats = () => {
             >
               <div className="relative p-6">
                 <div className="w-12 h-12 rounded-full bg-[#ea384c]/10 mb-4 flex items-center justify-center">
-                  <span className="text-white font-bold">{index + 1}</span>
+                  <span className="text-[#ea384c] font-bold">{index + 1}</span>
                 </div>
                 <p className="text-[#ea384c] font-medium text-lg">{card.title}</p>
                 <span className="text-white/60 text-sm">Réservez maintenant</span>
