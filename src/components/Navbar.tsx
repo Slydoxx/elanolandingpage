@@ -31,7 +31,7 @@ const Navbar = () => {
           onClick={() => window.open('https://calendly.com/thom-cademi/30min', '_blank')}
         >
           <span className="hidden md:inline">Planifier un appel</span>
-          <span className="md:hidden">Appel</span>
+          <span className="md:hidden">Contact</span>
         </Button>
       </div>
     </nav>
