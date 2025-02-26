@@ -19,6 +19,9 @@ const Navbar = () => {
           <Link to="/marketplace" className="text-white/90 hover:text-white transition-colors">
             Marketplace
           </Link>
+          <Link to="/#faq" className="text-white/90 hover:text-white transition-colors">
+            FAQ
+          </Link>
           <span className="text-white/40 cursor-not-allowed" title="Bientôt disponible">
             Blog
           </span>

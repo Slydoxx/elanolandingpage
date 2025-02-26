@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   Carousel,
@@ -75,8 +74,6 @@ const MarketplacePreview = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex" />
-          <CarouselNext className="hidden md:flex" />
         </Carousel>
       </div>
     </section>
