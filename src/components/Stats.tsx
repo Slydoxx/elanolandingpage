@@ -19,7 +19,7 @@ const Stats = () => {
   ];
 
   const handleCardClick = () => {
-    window.open('https://calendly.com/votre-lien', '_blank');
+    window.open('https://calendly.com/thom-cademi/30min', '_blank');
   };
 
   return (
