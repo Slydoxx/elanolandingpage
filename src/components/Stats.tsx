@@ -32,11 +32,11 @@ const Stats = () => {
         
         <div className="relative h-[200px] max-w-4xl mx-auto">
           {/* Available slots */}
-          <div className="flex justify-center gap-2 md:gap-4">
+          <div className="flex justify-center">
             {cards.map((card, index) => (
               <div
                 key={card.title}
-                className="w-full max-w-[260px] rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:z-10 bg-forest-light border border-mint/20 relative md:translate-x-0"
+                className="w-full max-w-[260px] rounded-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:z-10 bg-forest-light border border-mint/20 relative"
                 style={{
                   transform: `translateX(${index * -20}px)`,
                   zIndex: index,
@@ -55,9 +55,10 @@ const Stats = () => {
 
           {/* Reserved slot */}
           <div
-            className="absolute w-full max-w-[260px] rounded-xl overflow-hidden transform bg-forest-light border border-mint/20 md:right-0 right-4"
+            className="absolute w-full max-w-[260px] rounded-xl overflow-hidden transform bg-forest-light border border-mint/20"
             style={{
               top: 0,
+              right: '4%',
               zIndex: 0,
             }}
           >
