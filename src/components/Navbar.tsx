@@ -1,6 +1,13 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Navbar = () => {
   return (
@@ -10,9 +17,37 @@ const Navbar = () => {
           Elano
         </Link>
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/#services" className="text-white/90 hover:text-white transition-colors">
-            Nos services
-          </Link>
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-white/90 hover:text-white transition-colors bg-transparent">
+                  Nos services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid gap-3 p-4 w-[400px]">
+                    <Link
+                      to="/prototype-sur-mesure"
+                      className="block p-3 space-y-1 bg-forest-light hover:bg-mint/10 rounded-md"
+                    >
+                      <div className="font-medium text-white">Prototype sur mesure</div>
+                      <p className="text-sm text-white/70">
+                        Créez votre prototype digital personnalisé
+                      </p>
+                    </Link>
+                    <Link
+                      to="/ia-automatisation"
+                      className="block p-3 space-y-1 bg-forest-light hover:bg-mint/10 rounded-md"
+                    >
+                      <div className="font-medium text-white">Parlons IA & automatisation</div>
+                      <p className="text-sm text-white/70">
+                        Optimisez vos processus avec l'IA
+                      </p>
+                    </Link>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
           <Link to="/#methodology" className="text-white/90 hover:text-white transition-colors">
             Notre méthodologie
           </Link>
@@ -22,9 +57,9 @@ const Navbar = () => {
           <Link to="/marketplace" className="text-white/90 hover:text-white transition-colors">
             Marketplace
           </Link>
-          <Link to="/blog" className="text-white/90 hover:text-white transition-colors">
+          <span className="text-white/40 cursor-not-allowed" title="Bientôt disponible">
             Blog
-          </Link>
+          </span>
         </div>
         <Button 
           className="bg-mint hover:bg-mint-light text-forest font-medium"

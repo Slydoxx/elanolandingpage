@@ -1,5 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -8,24 +10,29 @@ const Hero = () => {
         <div className="space-y-8">
           <div className="flex items-center gap-2 bg-mint/10 w-fit px-4 py-2 rounded-full border border-mint/20">
             <Star className="w-4 h-4 text-mint" />
-            <span className="text-mint text-sm font-medium">AI-Powered Recruitment</span>
+            <span className="text-mint text-sm font-medium">Votre succès, notre priorité</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white">
-            Hire top
+            Un prototype
             <br />
-            tech talent
+            en 1 semaine
             <br />
-            wisely
+            sur mesure
           </h1>
           <p className="text-lg text-white/80 max-w-md">
-            Find and hire the best tech professionals for your team with our AI-powered recruitment platform.
+            Notre accompagnement vise à répondre aux besoins de votre cible en créant des produits digitaux performants sur les plans fonctionnel et technique.
           </p>
           <div className="flex items-center gap-4">
-            <Button className="bg-mint hover:bg-mint/90 text-forest font-medium px-8 py-6 text-lg">
-              Get Started <ArrowRight className="ml-2 h-5 w-5" />
+            <Button 
+              className="bg-mint hover:bg-mint/90 text-forest font-medium px-8 py-6 text-lg"
+              onClick={() => window.open('https://calendly.com/thom-cademi/30min', '_blank')}
+            >
+              Planifier un appel <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="outline" className="border-mint/20 text-mint hover:bg-mint/10">
-              Watch Demo
+              <Link to="/marketplace" className="flex items-center">
+                -> Marketplace
+              </Link>
             </Button>
           </div>
         </div>
