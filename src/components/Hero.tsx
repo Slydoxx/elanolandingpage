@@ -78,8 +78,8 @@ const Hero = () => {
             />
           </div>
           <div className="absolute -bottom-10 -left-10 bg-forest-light p-6 rounded-xl shadow-xl border border-mint/10">
-            <p className="text-mint text-4xl font-bold">124k+</p>
-            <p className="text-white/80">Active candidates</p>
+            <p className="text-mint text-4xl font-bold">1 semaine</p>
+            <p className="text-white/80">pour utiliser votre outil</p>
           </div>
         </div>
       </div>
