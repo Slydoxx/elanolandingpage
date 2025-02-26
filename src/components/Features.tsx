@@ -13,7 +13,7 @@ const Features = () => {
       content: {
         title: "Phase de Discovery",
         text: "La phase de discovery est cruciale pour le succès de votre projet. Nous travaillons ensemble pour comprendre vos objectifs, analyser le marché et définir les fonctionnalités essentielles.",
-        video: "placeholder-video-url-1" // À remplacer par la vraie URL de la vidéo
+        video: "placeholder-video-url-1"
       }
     },
     {
@@ -58,24 +58,26 @@ const Features = () => {
           <p className="text-white/80">Un processus clair, testé et efficace pour rapidement se mettre au service de la transformation de projet en produit digital performant</p>
         </div>
 
-        {/* Tabs horizontaux */}
+        {/* Tabs horizontaux avec animation améliorée */}
         <div className="grid grid-cols-4 gap-4 mb-12">
           {features.map((feature, index) => (
             <div
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`p-6 rounded-xl cursor-pointer transition-all duration-300 ${
+              className={`p-6 rounded-xl cursor-pointer transition-all duration-500 transform ${
                 activeTab === index 
-                ? "bg-forest-light border-l-4 border-mint" 
-                : "bg-forest-light/50 hover:bg-forest-light"
+                ? "bg-forest-light scale-105 border-l-4 border-mint shadow-lg shadow-mint/20" 
+                : "bg-forest-light/50 hover:bg-forest-light hover:scale-102"
               }`}
             >
-              <div className="w-12 h-12 bg-mint/10 rounded-full flex items-center justify-center mb-4">
+              <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-all duration-500 ${
+                activeTab === index ? "bg-mint/20" : "bg-mint/5"
+              }`}>
                 {React.createElement(feature.icon, { 
-                  className: `w-6 h-6 ${activeTab === index ? "text-mint" : "text-mint/60"}`
+                  className: `w-6 h-6 transition-all duration-500 ${activeTab === index ? "text-mint" : "text-mint/60"}`
                 })}
               </div>
-              <h3 className={`text-xl font-bold mb-2 ${
+              <h3 className={`text-xl font-bold mb-2 transition-all duration-500 ${
                 activeTab === index ? "text-mint" : "text-white"
               }`}>
                 {feature.title}
@@ -85,21 +87,23 @@ const Features = () => {
           ))}
         </div>
 
-        {/* Contenu en dessous */}
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-forest-light rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-mint mb-4">
-              {features[activeTab].content.title}
-            </h3>
-            <div className="aspect-video bg-black/20 rounded-lg mb-6">
+        {/* Contenu en colonnes avec animation */}
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-forest-light/50 backdrop-blur-xl rounded-xl p-8 grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
+            <div className="aspect-video bg-black/20 rounded-lg overflow-hidden">
               {/* Placeholder pour la vidéo */}
               <div className="w-full h-full flex items-center justify-center text-white/40">
                 Vidéo à venir
               </div>
             </div>
-            <p className="text-white/80 leading-relaxed">
-              {features[activeTab].content.text}
-            </p>
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-mint animate-scale-in">
+                {features[activeTab].content.title}
+              </h3>
+              <p className="text-white/80 leading-relaxed">
+                {features[activeTab].content.text}
+              </p>
+            </div>
           </div>
         </div>
       </div>
