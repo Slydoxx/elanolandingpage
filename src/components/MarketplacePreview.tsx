@@ -13,19 +13,16 @@ const MarketplacePreview = () => {
     {
       title: "Projet 1",
       description: "À venir - Nous préparons actuellement une série de projets pour illustrer nos réalisations. Restez à l'écoute !",
-      image: "/lovable-uploads/f39af18e-3ecc-464b-97e1-e039f0bdfb3d.png",
       category: "À venir"
     },
     {
       title: "Projet 2",
       description: "À venir - Nous préparons actuellement une série de projets pour illustrer nos réalisations. Restez à l'écoute !",
-      image: "/lovable-uploads/f39af18e-3ecc-464b-97e1-e039f0bdfb3d.png",
       category: "À venir"
     },
     {
       title: "Projet 3",
       description: "À venir - Nous préparons actuellement une série de projets pour illustrer nos réalisations. Restez à l'écoute !",
-      image: "/lovable-uploads/f39af18e-3ecc-464b-97e1-e039f0bdfb3d.png",
       category: "À venir"
     }
   ];
@@ -49,12 +46,7 @@ const MarketplacePreview = () => {
             {recentItems.map((item, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="bg-forest-light/30 backdrop-blur-xl rounded-xl p-6 h-full">
-                  <div className="aspect-video mb-6 rounded-lg overflow-hidden bg-forest-light/50">
-                    <img 
-                      src={item.image} 
-                      alt={item.title}
-                      className="w-full h-full object-cover opacity-30"
-                    />
+                  <div className="aspect-video mb-6 rounded-lg overflow-hidden bg-gray-800 relative">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <span className="text-mint font-medium">À venir</span>
                     </div>
