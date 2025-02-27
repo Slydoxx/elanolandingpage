@@ -6,33 +6,9 @@
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-l
   RewriteRule . /index.html [L]
 </IfModule>
 
-# Configuration des types MIME
-<IfModule mod_mime.c>
-  # Types JavaScript
-  AddType application/javascript .js
-  AddType application/javascript .mjs
-  AddType text/javascript .js
-  AddType text/javascript .mjs
-
-  # Définir le bon type MIME pour les modules JavaScript
-  <FilesMatch "\.js$">
-    Header set Content-Type "application/javascript"
-  </FilesMatch>
-  <FilesMatch "\.mjs$">
-    Header set Content-Type "application/javascript"
-  </FilesMatch>
-
-  # Pour les sources maps
-  AddType application/json .map
-</IfModule>
-
-# Activer les headers nécessaires pour les modules
-<IfModule mod_headers.c>
-  <FilesMatch "\.(js|mjs)$">
-    Header set X-Content-Type-Options "nosniff"
-  </FilesMatch>
-</IfModule>
+# Configuration des types MIME de base
+AddType application/javascript .js
+AddType text/css .css

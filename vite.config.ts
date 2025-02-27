@@ -20,19 +20,12 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    // Optimisations pour le déploiement
     outDir: "dist",
     assetsDir: "assets",
     emptyOutDir: true,
     sourcemap: false,
-    // Utiliser legacy pour compatibilité maximale
     target: "es2015",
-    minify: "terser",
-    terserOptions: {
-      compress: {
-        drop_console: true
-      }
-    },
+    minify: "esbuild", // Changé de terser à esbuild qui est plus fiable
     rollupOptions: {
       output: {
         manualChunks: {
