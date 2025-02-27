@@ -3,37 +3,12 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  
-  # Ne pas rediriger les fichiers ou dossiers existants
+  RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  
-  # Pour tout ce qui n'est pas un fichier/dossier réel
-  RewriteRule ^(.*)$ index.html [QSA,L]
+  RewriteRule . /index.html [L]
 </IfModule>
 
-# Configurer les types MIME correctement
-<IfModule mod_mime.c>
-  AddType application/javascript .js
-  AddType application/javascript .mjs
-  AddType text/css .css
-  AddType image/svg+xml .svg
-  AddType application/json .json
-</IfModule>
-
-# Forcer HTTPS
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-</IfModule>
-
-# Cache control
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType text/css "access plus 1 year"
-  ExpiresByType application/javascript "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-</IfModule>
+# Configuration des types MIME de base
+AddType application/javascript .js
+AddType text/css .css
