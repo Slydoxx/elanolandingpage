@@ -84,14 +84,9 @@ const Hero = () => {
               className="w-full"
             />
           </div>
-          <div className="absolute -bottom-10 -left-10 bg-forest-light p-6 rounded-xl shadow-xl border border-mint/10 max-w-xs">
-            <p className="text-mint text-lg font-semibold mb-2">Phase de Discovery</p>
-            <p className="text-white font-medium mb-2">📌 Clarification des besoins et cadrage du projet</p>
-            <ul className="text-white/80 text-sm space-y-1">
-              <li>🔹 Ateliers pour comprendre votre vision et les besoins utilisateurs</li>
-              <li>🔹 Définition des fonctionnalités clés pour un MVP efficace</li>
-              <li>🔹 Benchmark rapide des solutions existantes</li>
-            </ul>
+          <div className="absolute -bottom-10 -left-10 bg-forest-light p-6 rounded-xl shadow-xl border border-mint/10">
+            <p className="text-mint text-4xl font-bold">1 semaine</p>
+            <p className="text-white/80">pour utiliser votre outil</p>
           </div>
         </div>
       </div>
