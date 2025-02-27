@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Code, Cpu, Database, Layout, MessageSquare, Bot, Sparkles, Wand2, BookOpen } from "lucide-react";
+import { Code, Cpu, Database, Layout, MessageSquare, Bot, Sparkles, Wand2 } from "lucide-react";
 
 const Services = () => {
   const productServices = [
@@ -91,20 +91,6 @@ const Services = () => {
                   <p className="text-white/60">🔹 {service.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* Cas d'usage concrets */}
-          <div className="bg-forest-light/30 backdrop-blur-xl rounded-xl p-8">
-            <div className="flex items-center gap-2 mb-8">
-              <BookOpen className="w-6 h-6 text-mint" />
-              <h3 className="text-2xl font-bold text-white">Cas d'usage concrets</h3>
-            </div>
-            <div className="flex flex-col items-center justify-center py-12">
-              <p className="text-mint text-xl font-medium mb-2">À venir</p>
-              <p className="text-white/60 text-center max-w-2xl">
-                Nous préparons actuellement une série de cas d'usage concrets pour illustrer comment nos solutions ont aidé nos clients à résoudre leurs défis. Restez à l'écoute !
-              </p>
             </div>
           </div>
         </div>
