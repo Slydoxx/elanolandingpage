@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Code, Cpu, Database, Layout, MessageSquare, Bot, Sparkles, Wand2 } from "lucide-react";
+import { Code, Cpu, Database, Layout, MessageSquare, Bot, Sparkles, Wand2, Check } from "lucide-react";
 
 const Services = () => {
   const productServices = [
@@ -58,7 +58,10 @@ const Services = () => {
               <Sparkles className="w-6 h-6 text-mint" />
               <h3 className="text-2xl font-bold text-white">Services de Développement</h3>
             </div>
-            <p className="text-white/80 mb-8">📌 Services de Développement (Sur-mesure, adaptés aux besoins spécifiques de chaque client)</p>
+            <p className="text-white/80 mb-8">
+              <span className="inline-block w-4 h-4 bg-mint/20 rounded-sm mr-2"></span>
+              Services de Développement (Sur-mesure, adaptés aux besoins spécifiques de chaque client)
+            </p>
             <div className="grid md:grid-cols-3 gap-8">
               {productServices.map((service, index) => (
                 <div 
@@ -66,8 +69,13 @@ const Services = () => {
                   className="p-6 rounded-xl bg-forest-light/50 hover:bg-forest-light/70 transition-all duration-300"
                 >
                   <service.icon className="w-8 h-8 text-mint mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">✅ {service.title}</h4>
-                  <p className="text-white/60">🔹 {service.description}</p>
+                  <h4 className="text-xl font-bold text-white mb-2 flex items-center">
+                    <Check className="w-5 h-5 text-mint mr-2 flex-shrink-0" /> 
+                    {service.title}
+                  </h4>
+                  <p className="text-white/60 pl-7">
+                    {service.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -79,7 +87,10 @@ const Services = () => {
               <Cpu className="w-6 h-6 text-mint" />
               <h3 className="text-2xl font-bold text-white">Services IA</h3>
             </div>
-            <p className="text-white/80 mb-8">📌 Services IA (Optimisation des process grâce à l'Intelligence Artificielle)</p>
+            <p className="text-white/80 mb-8">
+              <span className="inline-block w-4 h-4 bg-mint/20 rounded-sm mr-2"></span>
+              Services IA (Optimisation des process grâce à l'Intelligence Artificielle)
+            </p>
             <div className="grid md:grid-cols-3 gap-8">
               {aiServices.map((service, index) => (
                 <div 
@@ -87,8 +98,13 @@ const Services = () => {
                   className="p-6 rounded-xl bg-forest-light/50 hover:bg-forest-light/70 transition-all duration-300"
                 >
                   <service.icon className="w-8 h-8 text-mint mb-4" />
-                  <h4 className="text-xl font-bold text-white mb-2">✅ {service.title}</h4>
-                  <p className="text-white/60">🔹 {service.description}</p>
+                  <h4 className="text-xl font-bold text-white mb-2 flex items-center">
+                    <Check className="w-5 h-5 text-mint mr-2 flex-shrink-0" /> 
+                    {service.title}
+                  </h4>
+                  <p className="text-white/60 pl-7">
+                    {service.description}
+                  </p>
                 </div>
               ))}
             </div>
