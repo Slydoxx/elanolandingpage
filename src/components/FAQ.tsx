@@ -13,15 +13,54 @@ const FAQ = () => {
   const faqs = [
     {
       question: "Comment garantissez-vous un prototype en 7 jours ?",
-      answer: "Nous utilisons le low-code couplés à une méthode agile éprouvée."
+      answer: (
+        <div className="space-y-3">
+          <p>Nous avons une méthodologie ultra-cadrée :</p>
+          <ul className="space-y-1 list-inside">
+            <li className="flex items-start">
+              <span className="inline-block w-2 h-2 bg-mint rounded-full mt-2 mr-2 flex-shrink-0"></span>
+              <span>Un atelier Discovery pour cadrer les besoins dès le jour 1.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="inline-block w-2 h-2 bg-mint rounded-full mt-2 mr-2 flex-shrink-0"></span>
+              <span>Un prototypage rapide basé sur du low-code et la compréhension des features du MVP.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="inline-block w-2 h-2 bg-mint rounded-full mt-2 mr-2 flex-shrink-0"></span>
+              <span>Une phase de test et validation en fin de sprint.</span>
+            </li>
+          </ul>
+          <p>Nous limitons volontairement nos projets à 4 entreprises par mois pour assurer un accompagnement optimal.</p>
+        </div>
+      )
     },
     {
       question: "Et si mon projet est plus complexe ?",
-      answer: "Nous adaptons notre accompagnement avec des offres sur-mesure."
+      answer: (
+        <div className="space-y-3">
+          <p>Si votre besoin dépasse les 7 jours, nous découpons le projet en sprints successifs.</p>
+          <p>Exemple : Un premier sprint pour le prototype fonctionnel, puis un second pour l'intégration des fonctionnalités avancées.</p>
+          <p>L'objectif est d'avoir un MVP testable rapidement sans attendre des mois de développement.</p>
+        </div>
+      )
     },
     {
       question: "Pourquoi le low-code et l'IA ?",
-      answer: "Pour aller plus vite, réduire les coûts et valider votre produit sans développement lourd."
+      answer: (
+        <div className="space-y-3">
+          <ul className="space-y-1 list-inside">
+            <li className="flex items-start">
+              <span className="inline-block w-2 h-2 bg-mint rounded-full mt-2 mr-2 flex-shrink-0"></span>
+              <span>Le low-code permet de développer 5x plus vite en automatisant certaines tâches de développement.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="inline-block w-2 h-2 bg-mint rounded-full mt-2 mr-2 flex-shrink-0"></span>
+              <span>L'IA optimise vos process métier en automatisant des tâches chronophages.</span>
+            </li>
+          </ul>
+          <p>Résultat : Moins de coûts, plus de rapidité et un time-to-market réduit.</p>
+        </div>
+      )
     }
   ];
 
