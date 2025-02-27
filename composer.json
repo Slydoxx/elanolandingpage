@@ -1,0 +1,8 @@
+
+{
+  "name": "elano",
+  "description": "Site web d'Elano",
+  "require": {
+    "php": ">=7.0.0"
+  }
+}
