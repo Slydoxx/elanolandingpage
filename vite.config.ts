@@ -25,6 +25,14 @@ export default defineConfig(({ mode }) => ({
     assetsDir: "assets",
     emptyOutDir: true,
     sourcemap: false,
+    // Utiliser legacy pour compatibilité maximale
+    target: "es2015",
+    minify: "terser",
+    terserOptions: {
+      compress: {
+        drop_console: true
+      }
+    },
     rollupOptions: {
       output: {
         manualChunks: {
