@@ -1,3 +1,4 @@
+
 import React from "react";
 import {
   Carousel,
@@ -10,22 +11,22 @@ import {
 const MarketplacePreview = () => {
   const recentItems = [
     {
-      title: "MyWater",
-      description: "Solution de purification d'eau potable conçue pour un usage domestique, offrant une technologie efficace et accessible.",
+      title: "Projet 1",
+      description: "À venir - Nous préparons actuellement une série de projets pour illustrer nos réalisations. Restez à l'écoute !",
       image: "/lovable-uploads/f39af18e-3ecc-464b-97e1-e039f0bdfb3d.png",
-      category: "MVP"
+      category: "À venir"
     },
     {
-      title: "Loomeno",
-      description: "Plateforme no-code permettant de créer des workflows personnalisés pour gérer efficacement toutes vos demandes.",
+      title: "Projet 2",
+      description: "À venir - Nous préparons actuellement une série de projets pour illustrer nos réalisations. Restez à l'écoute !",
       image: "/lovable-uploads/f39af18e-3ecc-464b-97e1-e039f0bdfb3d.png",
-      category: "Automatisation"
+      category: "À venir"
     },
     {
-      title: "Yeet",
-      description: "Plateforme connectant les piscines à des maîtres-nageurs indépendants, simplifiant la recherche de profils.",
+      title: "Projet 3",
+      description: "À venir - Nous préparons actuellement une série de projets pour illustrer nos réalisations. Restez à l'écoute !",
       image: "/lovable-uploads/f39af18e-3ecc-464b-97e1-e039f0bdfb3d.png",
-      category: "Plateforme"
+      category: "À venir"
     }
   ];
 
@@ -52,8 +53,11 @@ const MarketplacePreview = () => {
                     <img 
                       src={item.image} 
                       alt={item.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover opacity-30"
                     />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-mint font-medium">À venir</span>
+                    </div>
                   </div>
                   <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-mint/10 text-mint mb-3">
                     {item.category}
