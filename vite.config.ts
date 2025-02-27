@@ -6,6 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: "/", // Important pour les chemins relatifs
   server: {
     host: "::",
     port: 8080,
@@ -18,6 +19,7 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'] // Spécifier les extensions
   },
   build: {
     outDir: "dist",
@@ -25,9 +27,12 @@ export default defineConfig(({ mode }) => ({
     emptyOutDir: true,
     sourcemap: false,
     target: "es2015",
-    minify: "esbuild", // Changé de terser à esbuild qui est plus fiable
+    minify: "esbuild",
     rollupOptions: {
       output: {
+        entryFileNames: 'assets/[name].[hash].js',
+        chunkFileNames: 'assets/[name].[hash].js',
+        assetFileNames: 'assets/[name].[hash].[ext]',
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
         },
