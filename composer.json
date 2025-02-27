@@ -1,0 +1,9 @@
+
+{
+    "name": "elano/website",
+    "description": "Site web Elano",
+    "type": "project",
+    "require": {
+        "php": ">=7.4"
+    }
+}
