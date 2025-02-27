@@ -12,7 +12,7 @@ const Features = () => {
       description: "Ateliers pour clarifier votre vision, analyse des besoins utilisateurs et définition des fonctionnalités clés pour un MVP efficace.",
       content: {
         title: "Phase de Discovery",
-        text: "La phase de discovery est cruciale pour le succès de votre projet. Nous travaillons ensemble pour comprendre vos objectifs, analyser le marché et définir les fonctionnalités essentielles.",
+        text: "📌 Clarification des besoins et cadrage du projet\n🔹 Ateliers pour comprendre votre vision et les besoins utilisateurs\n🔹 Définition des fonctionnalités clés pour un MVP efficace\n🔹 Benchmark rapide des solutions existantes",
         video: "placeholder-video-url-1"
       }
     },
@@ -22,7 +22,7 @@ const Features = () => {
       description: "Recherche UX et prototypage rapide, interfaces modernes et intuitives, tests utilisateurs et validation des hypothèses.",
       content: {
         title: "Design & Prototypage",
-        text: "Notre approche du design combine esthétique et fonctionnalité. Nous créons des interfaces intuitives et élégantes qui répondent aux besoins de vos utilisateurs.",
+        text: "📌 Création de l'expérience utilisateur et prototypage rapide\n🔹 Définition des parcours utilisateurs\n🔹 Tests utilisateurs pour valider les hypothèses\n🔹 Définir les features essentielles",
         video: "placeholder-video-url-2"
       }
     },
@@ -31,8 +31,8 @@ const Features = () => {
       title: "Build",
       description: "Développement agile, coding optimisé par l'IA, intégration des meilleures technologies et déploiement rapide.",
       content: {
-        title: "Développement & Construction",
-        text: "Notre équipe utilise les dernières technologies et pratiques de développement pour construire votre produit de manière efficace et évolutive.",
+        title: "Developpement & construction",
+        text: "📌 Développement rapide et mise en place technique\n🔹 Développement agile avec intégration low-code et IA\n🔹 Automatisation et connectivité avec vos outils métier\n🔹 Livraison d'un prototype fonctionnel en 5 jours",
         video: "placeholder-video-url-3"
       }
     },
@@ -41,8 +41,8 @@ const Features = () => {
       title: "Launch & Iterate",
       description: "Lancement de votre MVP, suivi des KPIs et des feedbacks et améliorations continues pour scaler votre produit.",
       content: {
-        title: "Lancement & Amélioration Continue",
-        text: "Le lancement n'est que le début. Nous continuons à optimiser et améliorer votre produit en fonction des retours utilisateurs et des métriques.",
+        title: "Launch & Iterate",
+        text: "📌 Test et amélioration continue\n🔹 Mise en production d'un MVP exploitable\n🔹 Suivi des KPIs et collecte de feedbacks\n🔹 Optimisation et évolutions pour assurer la scalabilité",
         video: "placeholder-video-url-4"
       }
     }
@@ -99,9 +99,9 @@ const Features = () => {
               <h3 className="text-2xl font-bold text-mint animate-scale-in">
                 {features[activeTab].content.title}
               </h3>
-              <p className="text-white/80 leading-relaxed">
+              <div className="text-white/80 leading-relaxed whitespace-pre-line">
                 {features[activeTab].content.text}
-              </p>
+              </div>
             </div>
           </div>
         </div>
