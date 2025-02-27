@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -27,6 +27,22 @@ const MarketplacePreview = () => {
     }
   ];
 
+  const [scrollWidth, setScrollWidth] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const scrollTrackRef = useRef<HTMLDivElement>(null);
+
+  // Fonction pour gérer le défilement du carousel
+  const handleCarouselScroll = (api: any) => {
+    if (!api || !scrollTrackRef.current) return;
+    
+    const scrollSnaps = api.scrollSnapList();
+    const scrollProgress = api.scrollProgress();
+    
+    // Calculer la position relative du scroll
+    const position = scrollProgress * (scrollTrackRef.current.clientWidth - scrollWidth);
+    setScrollPosition(position >= 0 ? position : 0);
+  };
+
   return (
     <section id="marketplace" className="py-20 px-4">
       <div className="container mx-auto">
@@ -41,6 +57,7 @@ const MarketplacePreview = () => {
             loop: true,
           }}
           className="w-full"
+          onScroll={(api) => handleCarouselScroll(api)}
         >
           <CarouselContent>
             {recentItems.map((item, index) => (
@@ -60,6 +77,29 @@ const MarketplacePreview = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
+
+          <div className="mt-6 md:hidden">
+            {/* Indicateurs de navigation sur mobile */}
+            <div className="flex items-center justify-center space-x-2">
+              {recentItems.map((_, index) => (
+                <div 
+                  key={index}
+                  className={`h-2 w-2 rounded-full transition-colors duration-300 ${
+                    index === 0 ? "bg-mint" : "bg-forest-light/50"
+                  }`}
+                />
+              ))}
+            </div>
+            {/* Message d'indication de défilement */}
+            <div className="text-center mt-3 text-mint/70 text-sm animate-pulse">
+              <span>← Glissez pour voir plus →</span>
+            </div>
+          </div>
+
+          <div className="hidden md:flex justify-end gap-2 mt-6">
+            <CarouselPrevious />
+            <CarouselNext />
+          </div>
         </Carousel>
       </div>
     </section>

@@ -1,3 +1,4 @@
+
 import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
@@ -17,6 +18,7 @@ type CarouselProps = {
   plugins?: CarouselPlugin
   orientation?: "horizontal" | "vertical"
   setApi?: (api: CarouselApi) => void
+  onScroll?: (api: CarouselApi) => void
 }
 
 type CarouselContextProps = {
@@ -26,6 +28,7 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
+  onScroll?: (api: CarouselApi) => void
 } & CarouselProps
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null)
@@ -52,6 +55,7 @@ const Carousel = React.forwardRef<
       plugins,
       className,
       children,
+      onScroll,
       ...props
     },
     ref
@@ -73,7 +77,12 @@ const Carousel = React.forwardRef<
 
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
-    }, [])
+      
+      // Call the onScroll callback if provided
+      if (onScroll) {
+        onScroll(api)
+      }
+    }, [onScroll])
 
     const scrollPrev = React.useCallback(() => {
       api?.scrollPrev()
@@ -112,11 +121,23 @@ const Carousel = React.forwardRef<
       onSelect(api)
       api.on("reInit", onSelect)
       api.on("select", onSelect)
+      
+      // Add scroll listener for continuous updates
+      if (onScroll) {
+        api.on("scroll", () => {
+          onScroll(api)
+        })
+      }
 
       return () => {
         api?.off("select", onSelect)
+        if (onScroll) {
+          api?.off("scroll", () => {
+            onScroll(api)
+          })
+        }
       }
-    }, [api, onSelect])
+    }, [api, onSelect, onScroll])
 
     return (
       <CarouselContext.Provider
@@ -130,6 +151,7 @@ const Carousel = React.forwardRef<
           scrollNext,
           canScrollPrev,
           canScrollNext,
+          onScroll,
         }}
       >
         <div
