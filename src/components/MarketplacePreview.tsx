@@ -79,18 +79,7 @@ const MarketplacePreview = () => {
           </CarouselContent>
 
           <div className="mt-6 md:hidden">
-            {/* Indicateurs de navigation sur mobile */}
-            <div className="flex items-center justify-center space-x-2">
-              {recentItems.map((_, index) => (
-                <div 
-                  key={index}
-                  className={`h-2 w-2 rounded-full transition-colors duration-300 ${
-                    index === 0 ? "bg-mint" : "bg-forest-light/50"
-                  }`}
-                />
-              ))}
-            </div>
-            {/* Message d'indication de défilement */}
+            {/* Message d'indication de défilement - sans les points indicateurs */}
             <div className="text-center mt-3 text-mint/70 text-sm animate-pulse">
               <span>← Glissez pour voir plus →</span>
             </div>
