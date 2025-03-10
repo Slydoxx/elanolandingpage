@@ -24,7 +24,7 @@ const Index = () => {
         <meta name="twitter:title" content="Elano.io - Prototypes Digitaux Low-Code" />
         <meta name="twitter:description" content="Créez votre prototype digital en 1 semaine avec notre expertise low-code" />
         <link rel="canonical" href="https://elano.io" />
-        <link rel="alternate" hreflang="fr" href="https://elano.io" />
+        <link rel="alternate" hrefLang="fr" href="https://elano.io" />
         <meta name="geo.region" content="FR" />
         <meta name="geo.placename" content="Paris" />
         <script type="application/ld+json">
