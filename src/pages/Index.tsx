@@ -13,11 +13,11 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Créez votre prototype digital en 1 semaine | Elano.io - Développement Low-Code</title>
+        <title>Prototypes digitaux en 1 semaine | Elano.io</title>
         <meta name="description" content="Transformez vos idées en prototypes fonctionnels en seulement 1 semaine grâce à notre expertise en développement low-code et intelligence artificielle. Découvrez notre méthodologie unique." />
         <meta name="keywords" content="prototype digital, développement low-code, MVP, startup, innovation, intelligence artificielle, automatisation, développement rapide" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Créez votre prototype digital en 1 semaine | Elano.io" />
+        <meta property="og:title" content="Prototypes digitaux en 1 semaine | Elano.io" />
         <meta property="og:description" content="Transformez vos idées en prototypes fonctionnels en 1 semaine. Expertise en développement low-code et IA." />
         <meta property="og:url" content="https://elano.io" />
         <meta name="twitter:card" content="summary_large_image" />
