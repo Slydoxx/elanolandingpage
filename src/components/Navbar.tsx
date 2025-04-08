@@ -26,7 +26,7 @@ const Navbar = () => {
             onClick={() => scrollToSection("pain-points")} 
             className="text-white/90 hover:text-white transition-colors"
           >
-            Problématiques
+            Notre mission
           </button>
           <button 
             onClick={() => scrollToSection("offer")} 

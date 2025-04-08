@@ -9,7 +9,7 @@ const CallToAction = () => {
 
   return (
     <div className="container mx-auto px-4">
-      <div className="bg-forest-light/50 backdrop-blur-xl rounded-xl p-8 md:p-12 relative overflow-hidden">
+      <div className="bg-forest-light/50 backdrop-blur-xl rounded-xl p-8 md:p-12 relative overflow-hidden border border-mint/10">
         {/* Gradient accent */}
         <div className="absolute -top-24 -right-24 w-48 h-48 bg-mint/30 rounded-full blur-3xl opacity-20"></div>
         

@@ -80,7 +80,7 @@ const Index = () => {
           <Navbar />
         </header>
         <Hero />
-        <section id="pain-points" aria-label="Problématiques" className="py-16">
+        <section id="pain-points" aria-label="Notre mission" className="py-16">
           <PainPoints />
         </section>
         <section id="offer" aria-label="Notre offre" className="py-16" itemScope itemType="https://schema.org/Service">

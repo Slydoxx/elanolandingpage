@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Left column */}
           <div>
-            <h2 className="text-4xl font-bold mb-6">Prêt à démarrer?</h2>
+            <h2 className="text-4xl font-bold mb-6 text-white">Prêt à démarrer?</h2>
             <p className="text-white/80 mb-6 max-w-md">
               Réservez votre appel découverte gratuit pour discuter de votre projet et voir comment nous pouvons vous aider à le concrétiser en 7 jours.
             </p>
@@ -42,10 +42,10 @@ const Footer = () => {
 
           {/* Right column */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold mb-4">Liens rapides</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-white">Liens rapides</h3>
             <div className="grid grid-cols-2 gap-4">
               <button onClick={() => document.getElementById("pain-points")?.scrollIntoView({ behavior: "smooth" })} className="text-white/60 hover:text-mint transition-colors text-left">
-                Problématiques
+                Notre mission
               </button>
               <button onClick={() => document.getElementById("offer")?.scrollIntoView({ behavior: "smooth" })} className="text-white/60 hover:text-mint transition-colors text-left">
                 Notre offre
@@ -58,7 +58,7 @@ const Footer = () => {
               </button>
             </div>
             
-            <h3 className="text-2xl font-semibold mb-4 mt-8">Suivez-nous</h3>
+            <h3 className="text-2xl font-semibold mb-4 mt-8 text-white">Suivez-nous</h3>
             <div className="flex gap-6">
               <a 
                 href="https://www.youtube.com/@ThomSzydlo"

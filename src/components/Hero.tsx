@@ -1,7 +1,6 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Star } from "lucide-react";
-import { useState } from "react";
 
 const Hero = () => {
   const bookCall = () => {
@@ -14,18 +13,18 @@ const Hero = () => {
         <div className="space-y-8">
           <div className="flex items-center gap-2 bg-mint/10 w-fit px-4 py-2 rounded-full border border-mint/20">
             <Star className="w-4 h-4 text-mint" aria-hidden="true" />
-            <span className="text-mint text-sm font-medium">Offre spéciale entrepreneurs</span>
+            <span className="text-mint text-sm font-medium">Offre pour entrepreneurs et startups</span>
           </div>
           <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
-            Transformez votre 
-            <span className="bg-[#D3E4FD]/10 px-2 ml-2 rounded-lg">idée</span>
+            Votre 
+            <span className="bg-[#D3E4FD]/10 px-2 ml-2 rounded-lg">prototype</span>
             <br />
-            en prototype fonctionnel
+            fonctionnel
             <br />
             <span className="text-mint">en 7 jours</span>
           </h1>
           <p className="text-lg text-white/80 max-w-md">
-            L'accélérateur de startups tech pour entrepreneurs incubés et porteurs de projets ambitieux.
+            L'accélérateur de startups tech pour entrepreneurs incubés, PME et porteurs de projets ambitieux.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <Button 
@@ -37,7 +36,7 @@ const Hero = () => {
             </Button>
             <div className="flex items-center gap-2 text-mint">
               <Clock className="w-5 h-5" />
-              <span>Offre limitée à 3 places en Mars</span>
+              <span>Places limitées chaque mois</span>
             </div>
           </div>
         </div>
@@ -52,7 +51,7 @@ const Hero = () => {
           </div>
           <div className="absolute -bottom-10 -left-10 bg-forest-light p-6 rounded-xl shadow-xl border border-mint/10">
             <p className="text-mint text-4xl font-bold">2000€</p>
-            <p className="text-white/80">Package complet</p>
+            <p className="text-white/80">Tout compris</p>
           </div>
         </div>
       </div>
