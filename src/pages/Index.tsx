@@ -1,28 +1,28 @@
 
-import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import PainPoints from "@/components/PainPoints";
-import Offer from "@/components/Offer";
-import Testimonials from "@/components/Testimonials";
+import Stats from "@/components/Stats";
+import Features from "@/components/Features";
+import Services from "@/components/Services";
+import MarketplacePreview from "@/components/MarketplacePreview";
 import FAQ from "@/components/FAQ";
-import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet";
 
 const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Prototype en 7 jours | Transformez votre idée en produit tech | Elano.io</title>
-        <meta name="description" content="Transformez votre idée en prototype fonctionnel en 7 jours. Une offre tout-en-un pour les entrepreneurs incubés, startups et porteurs de projets tech." />
-        <meta name="keywords" content="prototype digital, MVP, startup, développement rapide, prototype 7 jours, incubateur, levée de fonds, financement startup" />
+        <title>Prototypes digitaux en 1 semaine | Elano.io</title>
+        <meta name="description" content="Transformez vos idées en prototypes fonctionnels en seulement 1 semaine grâce à notre expertise en développement low-code et intelligence artificielle. Découvrez notre méthodologie unique." />
+        <meta name="keywords" content="prototype digital, développement low-code, MVP, startup, innovation, intelligence artificielle, automatisation, développement rapide, prototypage, création prototype digital, agence prototype Paris, prototype application, MVP startup" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Prototype en 7 jours | Transformez votre idée en produit tech | Elano.io" />
-        <meta property="og:description" content="Transformez votre idée en prototype fonctionnel en 7 jours. Une offre tout-en-un pour les entrepreneurs incubés, startups et porteurs de projets tech." />
+        <meta property="og:title" content="Prototypes digitaux en 1 semaine | Elano.io" />
+        <meta property="og:description" content="Transformez vos idées en prototypes fonctionnels en 1 semaine. Expertise en développement low-code et IA." />
         <meta property="og:url" content="https://elano.io" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Prototype en 7 jours | Elano.io" />
-        <meta name="twitter:description" content="Transformez votre idée en prototype fonctionnel en 7 jours. Une offre dédiée aux entrepreneurs en phase d'amorçage." />
+        <meta name="twitter:title" content="Elano.io - Prototypes Digitaux Low-Code" />
+        <meta name="twitter:description" content="Créez votre prototype digital en 1 semaine avec notre expertise low-code" />
         <link rel="canonical" href="https://elano.io" />
         <link rel="alternate" hrefLang="fr" href="https://elano.io" />
         <meta name="geo.region" content="FR" />
@@ -33,7 +33,7 @@ const Index = () => {
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": "Elano.io",
-            "description": "Création de prototypes digitaux en 7 jours pour entrepreneurs et startups",
+            "description": "Service de création de prototypes digitaux et développement low-code en 1 semaine",
             "url": "https://elano.io",
             "logo": "https://elano.io/lovable-uploads/b863afae-3067-463c-a953-05bf94487f54.png",
             "address": {
@@ -50,15 +50,8 @@ const Index = () => {
               "Paris", "Lyon", "Marseille", "Toulouse", "Nice", "Nantes", "Strasbourg", 
               "Montpellier", "Bordeaux", "Lille", "Rennes", "Reims", "France"
             ],
-            "serviceType": ["Prototype en 7 jours", "MVP startup", "Développement tech rapide", "Accompagnement startup"],
+            "serviceType": ["Développement prototype", "MVP", "Application low-code", "Automatisation IA"],
             "priceRange": "€€€",
-            "offers": {
-              "@type": "Offer",
-              "price": "2000",
-              "priceCurrency": "EUR",
-              "description": "Prototype en 7 jours - Lancement Tech Clé en Main",
-              "availability": "LimitedAvailability"
-            },
             "sameAs": ["https://elano.io"],
             "potentialAction": {
               "@type": "ReserveAction",
@@ -68,7 +61,7 @@ const Index = () => {
               },
               "result": {
                 "@type": "Reservation",
-                "name": "Réservation d'un appel découverte gratuit"
+                "name": "Réservation d'un sprint de développement"
               }
             }
           }
@@ -80,20 +73,20 @@ const Index = () => {
           <Navbar />
         </header>
         <Hero />
-        <section id="pain-points" aria-label="Notre mission" className="py-16">
-          <PainPoints />
+        <section aria-label="Statistiques clés" className="py-16">
+          <Stats />
         </section>
-        <section id="offer" aria-label="Notre offre" className="py-16" itemScope itemType="https://schema.org/Service">
-          <Offer />
+        <section aria-label="Notre méthodologie" className="py-16" itemScope itemType="https://schema.org/Service">
+          <Features />
         </section>
-        <section id="testimonials" aria-label="Témoignages clients" className="py-16">
-          <Testimonials />
+        <section aria-label="Nos services" className="py-16" itemScope itemType="https://schema.org/Service">
+          <Services />
         </section>
-        <section id="faq" aria-label="Questions fréquentes" className="py-16" itemScope itemType="https://schema.org/FAQPage">
+        <section aria-label="Marketplace de projets" className="py-16">
+          <MarketplacePreview />
+        </section>
+        <section aria-label="Questions fréquentes" className="py-16" itemScope itemType="https://schema.org/FAQPage">
           <FAQ />
-        </section>
-        <section id="cta" aria-label="Appel à l'action" className="py-16">
-          <CallToAction />
         </section>
         <footer>
           <Footer />

@@ -1,7 +1,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { CalendarCheck } from "lucide-react";
 
 const Navbar = () => {
   const scrollToSection = (sectionId: string) => {
@@ -9,10 +8,6 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-  };
-
-  const bookCall = () => {
-    window.open('https://calendly.com/thom-cademi/30min', '_blank');
   };
 
   return (
@@ -23,22 +18,22 @@ const Navbar = () => {
         </Link>
         <div className="hidden md:flex items-center space-x-8">
           <button 
-            onClick={() => scrollToSection("pain-points")} 
+            onClick={() => scrollToSection("methodology")} 
             className="text-white/90 hover:text-white transition-colors"
           >
-            Notre mission
+            Notre méthodologie
           </button>
           <button 
-            onClick={() => scrollToSection("offer")} 
+            onClick={() => scrollToSection("services")} 
             className="text-white/90 hover:text-white transition-colors"
           >
-            Notre offre
+            Nos services
           </button>
           <button 
-            onClick={() => scrollToSection("testimonials")} 
+            onClick={() => scrollToSection("marketplace")} 
             className="text-white/90 hover:text-white transition-colors"
           >
-            Témoignages
+            Marketplace
           </button>
           <button 
             onClick={() => scrollToSection("faq")} 
@@ -46,13 +41,15 @@ const Navbar = () => {
           >
             FAQ
           </button>
+          <span className="text-white/40 cursor-not-allowed" title="Bientôt disponible">
+            Blog
+          </span>
         </div>
         <Button 
-          className="bg-mint hover:bg-mint/90 text-forest font-medium"
-          onClick={bookCall}
+          className="bg-mint hover:bg-mint-light text-forest font-medium"
+          onClick={() => window.open('https://calendly.com/thom-cademi/30min', '_blank')}
         >
-          <CalendarCheck className="w-4 h-4 mr-2 hidden md:inline" />
-          <span className="hidden md:inline">Réserver mon appel</span>
+          <span className="hidden md:inline">Lancer mon prototype</span>
           <span className="md:hidden">Contact</span>
         </Button>
       </div>
