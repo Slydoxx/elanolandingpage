@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { CalendarCheck } from "lucide-react";
 
 const Navbar = () => {
   const scrollToSection = (sectionId: string) => {
@@ -8,6 +9,10 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const bookCall = () => {
+    window.open('https://calendly.com/thom-cademi/30min', '_blank');
   };
 
   return (
@@ -18,22 +23,22 @@ const Navbar = () => {
         </Link>
         <div className="hidden md:flex items-center space-x-8">
           <button 
-            onClick={() => scrollToSection("methodology")} 
+            onClick={() => scrollToSection("pain-points")} 
             className="text-white/90 hover:text-white transition-colors"
           >
-            Notre méthodologie
+            Problématiques
           </button>
           <button 
-            onClick={() => scrollToSection("services")} 
+            onClick={() => scrollToSection("offer")} 
             className="text-white/90 hover:text-white transition-colors"
           >
-            Nos services
+            Notre offre
           </button>
           <button 
-            onClick={() => scrollToSection("marketplace")} 
+            onClick={() => scrollToSection("testimonials")} 
             className="text-white/90 hover:text-white transition-colors"
           >
-            Marketplace
+            Témoignages
           </button>
           <button 
             onClick={() => scrollToSection("faq")} 
@@ -41,15 +46,13 @@ const Navbar = () => {
           >
             FAQ
           </button>
-          <span className="text-white/40 cursor-not-allowed" title="Bientôt disponible">
-            Blog
-          </span>
         </div>
         <Button 
-          className="bg-mint hover:bg-mint-light text-forest font-medium"
-          onClick={() => window.open('https://calendly.com/thom-cademi/30min', '_blank')}
+          className="bg-mint hover:bg-mint/90 text-forest font-medium"
+          onClick={bookCall}
         >
-          <span className="hidden md:inline">Lancer mon prototype</span>
+          <CalendarCheck className="w-4 h-4 mr-2 hidden md:inline" />
+          <span className="hidden md:inline">Réserver mon appel</span>
           <span className="md:hidden">Contact</span>
         </Button>
       </div>
